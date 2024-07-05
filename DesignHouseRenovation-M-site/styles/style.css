@@ -1,0 +1,722 @@
+/*必ず入れる↓*/
+@charset "utf-8";
+
+/*メディアクエリ*/
+@media screen and (max-width: 768px) {
+
+/* 指定されているカラーコード、フォントなどデザインルールをメモしておく */
+
+/* カラー 
+#B71B26 赤
+#223E69　青
+#FFFFFF　白
+#333333　黒
+*/
+
+/* フォント 
+"Noto Serif JP", 
+"Noto Sans JP"
+*/
+
+body {
+    background-color: #ffffff;
+    font-family: "Noto Serif JP", "Noto Sans JP",sans-serif;
+}
+
+header {
+    height: 51.71px;
+}
+
+/*rogo*/
+header img {
+    width: 240px;
+    height: 19.71px;
+    margin: 16px 123px 16px 12px;
+}
+
+/*mainTopimg*/
+main .mainImg {
+    height: 480px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+/* 一番大きな親要素の内側に余白をつくる */
+#conceptArea {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#conceptArea h1 {
+    margin-top: 48px;
+}
+
+/* 一番大きな親要素の内側に余白をつくる */
+#serviceArea {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#serviceArea h1 {
+    margin-top: 80px;
+}
+
+#serviceArea h2 {
+    margin-bottom: 24px;
+}
+
+/* 一番大きな親要素の内側に余白をつくる */
+#qaArea {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#qaArea h1 {
+    margin-top: 80px;
+}
+
+#qaArea h2 {
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-family: "Noto Serif JP";
+    font-size: 12px;
+    line-height: 12px;
+}
+
+/* サブタイトル横の棒線 */
+h2 {
+    display: flex;
+    align-items: center; /* 垂直中心 */
+    justify-content: center; /* 水平中心 */
+  }
+h2:before, h2:after {
+    border-top: 1px solid;
+    content: "";
+    width: 60.5px; /* 線の長さ */
+    color: #223E69;
+  }
+h2:before {
+    margin-right: 8px; /* 文字の右隣 */
+  }
+h2:after {
+    margin-left: 8px; /* 文字の左隣 */
+  }
+
+.lead {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-weight: 400; 
+    line-height: 28px;  /*行間*/
+    letter-spacing: 0.1em;    /*文字間隔*/
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: left;   /*親要素にはcenterを指定、子要素に左揃えを支持*/
+    text-align: justify;  /*両端揃え*/
+}
+
+.leadText {
+    display: inline-block; 
+}
+
+/* 一番大きな親要素の内側に余白をつくる */
+#contactArea {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#conceptArea h3 {
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-family: "Noto Serif JP";
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: 0.1em; 
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+#serviceArea h3 {
+    font-family: "Noto Serif JP";
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em; 
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.text {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    letter-spacing: 0.1em; 
+    display: inline-block; 
+    text-align: left; 
+    text-align: justify;
+}
+
+#serviceArea img {
+    width: 351px;
+    height: 246.29px;
+    object-fit: cover;  /*領域いっぱいに縦横比を保ったまま拡大縮小される */
+}
+
+.more {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: right;
+    padding-right: 20.75px;
+    padding-bottom: 80px;
+}
+
+
+/* 二等辺三角形右向き */
+.triangle-right {
+    height:9.5px;
+    width: 4.75px; 
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background: #b71b26;
+}
+
+/* moreの横に三角形を配置したい */
+
+.more {
+    position: relative;
+}
+
+/* 疑似要素 */
+.more::after{
+    content: "";
+    position: absolute;
+    height:9.5px;
+    width: 4.75px; 
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background: #b71b26;
+    bottom: 80.4px;
+    right: 10px;
+}
+
+/* <ol>全体の方の幅と上下、左右の外の余白を決める */
+
+/*flowArea */
+
+#flowArea h2 {
+    color: #b71b26;
+}
+
+/* サブタイトルの文字の色横棒の色変化させる */
+
+#flowArea h2:before, h2:after {
+    border-top: 1px solid;
+    content: "";
+    width: 60.5px; /* 線の長さ */
+    color: #b71b26;
+  }
+  #flowArea h2:before {
+    margin-right: 8px; /* 文字の右隣 */
+  }
+  #flowArea h2:after {
+    margin-left: 8px; /* 文字の左隣 */
+  }
+
+#flowArea ol {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#flowArea li {
+    background-color: #333333;
+    height: 32px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 8px 0;
+    border-radius: 32px;
+}
+
+#flowArea li {
+    font-family: Noto Sans JP;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em; 
+}
+
+/* 二等辺三角形下向き、５つ三角つくって１つづつ透明度つける*/
+
+.triangle-down {
+    height: 16px;
+    width: 32px; 
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: #b71b26;
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: center;  
+  }
+
+.triangle-down1 {
+    height: 16px;
+    width: 32px; 
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: rgba(183, 27, 38, 0.6);
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: center;  
+  }
+
+.triangle-down2 {
+    height: 16px;
+    width: 32px; 
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: rgba(183, 27, 38, 0.7);
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: center;  
+}
+
+.triangle-down3 {
+    height: 16px;
+    width: 32px; 
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: rgba(183, 27, 38, 0.8);
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: center;  
+}
+
+.triangle-down4 {
+    height: 16px;
+    width: 32px; 
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: rgba(183, 27, 38, 0.9);
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: center;  
+}
+
+#flowArea {
+    height: 456px;
+    margin: 0 auto;
+    background-color: rgba(34, 62, 105,0.05);
+}
+
+#flowArea h1 {
+    margin-top: 16px;
+}
+
+#flowArea h2 {
+    margin-bottom: 24px;
+}
+
+/* q&aArea */
+
+.qaDetailSec {
+    display: inline-block;
+}
+
+
+.qaDetailSec p {
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    display: inline-block;  /*テキストを入れているタグにinline-blockつける*/
+    text-align: left;   /*親要素にはcenterを指定、子要素に左揃えを支持*/
+    padding-left: 5.11px;
+    text-align: justify;
+}
+
+#qaArea h3 {
+    font-family: "Noto Serif JP";
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    /* color: #ffffff;  文字白にしちゃうと見えない*/ 
+}
+
+#qaArea h4 {
+    font-family: "Noto Serif JP";
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    /* color: #ffffff;  文字白にしちゃうと見えない*/ 
+}
+
+#qaArea h3 {
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    background-color: #333333; /* 任意の背景色 */
+    border-radius: 50%; /* 角を丸くして円にする */
+    padding: 5px 1px 11px 9px;
+    margin-left: 12px;
+    margin-right: 5.11;
+}
+
+#qaArea h4 {
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    background-color: #b71b26; /* 任意の背景色 */
+    border-radius: 50%; /* 角を丸くして円にする */
+    padding: 5px 1px 11px 9px;
+    margin-left: 12px;
+    margin-right: 5.11;
+}
+
+#qaArea h2 {
+    margin-bottom: 24px;
+}
+
+/* 親要素にdisplay: flex;を支持 */
+.display {
+    display: flex;
+    align-items: first baseline;
+    margin-top: 16px;
+}
+
+.displayQ {
+    display: flex;
+    align-items: first baseline;
+}
+
+.displayQ2 {
+    display: flex;
+    align-items: first baseline;
+    padding-top: 24px;
+}
+
+.displayA2 {
+    display: flex;
+    align-items: first baseline;
+    padding-top: 22px;
+    padding-bottom: 80px;
+}
+
+/* contactArea form */
+#contactArea {
+    background-color: rgba(34,62,105,0.1);
+    margin-bottom: 80px;
+}
+
+form {
+    width: 351px;  /*子要素に幅指定してみた */
+    margin: 0 auto; /*子要素に指定してみた */
+}
+
+#contactArea h1 {
+    margin-top: 16px;
+}
+
+#contactArea h2 {
+    margin-bottom: 24px;
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.name {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.hurigana {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.tel {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.adl {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.mail {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.mailR {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.inquiry {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    background-color: #ffffff;
+    height: 30px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+input[type="number"],
+select,
+textarea {
+    width: 125px;
+}
+
+/* ラジオボタンのデザインを変更 */
+input[type="radio"]
+ {
+    vertical-align: baseline;
+    margin-left: 40px;
+    border: 0px;
+     /* display: none;ラジオボタンを非表示にする */
+}
+
+/* 〇を疑似要素でつくる */
+
+
+
+form p {
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+label {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+/* 赤い必須ボタンつくる */
+.hissu {
+    font-family: "Noto Sans JP";
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    background-color: #b71b26;
+    padding: 3px 9.5px 3px 9.5px;
+    border-radius: 10px;
+    vertical-align: baseline;
+}
+
+/* 親要素にdisplay: flex;を支持 */
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container p {
+    padding-bottom: 9px;
+}
+
+.contactareaButton {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+
+textarea {
+    width: 351px;
+    height: 120px;
+}
+
+input[type="submit"] {
+    background-color: #333333;
+    color: #ffffff;
+    font-family: "Noto Serif JP";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 16px 16.5px 16px 16.5px;
+    margin-top: 24px;
+}
+
+.inquiryTtriangle {
+    height: 12px;
+    width: 6px; 
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background: #ffffff;
+}
+
+/*
+.innerWrap {
+    border: 4px solid lightcoral;
+ } */
+
+.displayA {
+    margin-top: 16px;
+}
+
+.containerButton {
+    display: flex;
+    align-items: center;
+}
+
+/* ハンバーガーメニュー */
+
+/* メニューを画面上部に固定表示しています */
+.gMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  /* メニューアイコンを画面右上に固定しています */
+  .gMenu .menu-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    padding-top: 5px;
+    height: 12px;
+  }
+  /* メニューアイコン（三本線）の真ん中の線です */
+  .gMenu .menu-icon .navicon {
+    background: #B71B26; /* 色は自由に変更可能です */
+    display: block;
+    height: 2px; /* 太さ */
+    width: 31px; /* 長さ */
+    position: relative;
+    transition: background .4s ease-out; /* 形が変わる時のアニメーション */
+  }
+  /* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+  .gMenu .menu-icon .navicon::before,
+  .gMenu .menu-icon .navicon::after {
+    background: #B71B26; /* 色は自由に変更可能です */
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease-out; /* 形が変わる時のアニメーション */
+    width: 100%;
+  }
+  .gMenu .menu-icon .navicon::before {top: 10px;} /* 位置を上にずらしています */
+  .gMenu .menu-icon .navicon::after {top: -10px;} /* 位置を下にずらしています */
+  /* 表示されるメニューです */
+  .gMenu .menu {
+    background-color: rgba(255,255,255,0.9);
+    overflow: hidden;
+    max-height: 0; /* ★最初は高さを0にして非表示状態に */
+    transition: max-height .6s; /* 表示されるときのアニメーション */
+    text-align: center;
+  }
+  /* メニュー部分のデザインです */
+  .gMenu .menu li:first-of-type {
+    padding-top: 50px;
+  }
+  .gMenu .menu li a {
+    display: block;
+    padding: 24px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .gMenu .menu li a:hover {
+    background-color: #f4f4f4;
+  }
+  /* チェックボックスは常に非表示です */
+  .gMenu .menu-btn {
+    display: none;
+  }
+  /* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+  .gMenu .menu-btn:checked ~ .menu {
+    max-height: 338px; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+    transition: max-height .6s;
+  }
+  /* メニューボタンの中央の線を非表示に */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
+  
+  /* メニューボタンの上下の線を45度傾けて✕印を作ります */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
+
+li {
+    font-family: "Noto Serif JP";
+    font-size: 16px;
+    color: #333333;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 48px;
+}
+
+/* 三角Toppageに戻るスクロール */
+
+.arrow_right a {
+    background-color: #ffffff;
+    height: 126px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+/* フッター */
+footer {
+    background-color: #333333;
+    height: 45px;
+    text-align: center;
+}
+
+footer p {
+    font-family: "Noto Serif JP";
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    padding-top: 16px;
+}
+
+
+}   /*メディアクエリ用カッコ*/
